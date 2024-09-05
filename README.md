@@ -68,7 +68,9 @@ author: Autor do livro.<br>
 year: Ano de publicação do livro.<br>
 description: Descrições adicionais sobre o livro: {
  genre: Gênero do livro,
- isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro)
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),
+ edition: Qual a edição do livro,
+ publisher: Editora responsável pela publicação
 }.
 
 Exemplo de requisição:
@@ -150,7 +152,9 @@ year: Ano de publicação do livro.<br>
 author: Autor do livro.<br>
 description: Descrições adicionais sobre o livro: {
  genre: Gênero do livro,
- isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro)
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),
+ edition: Qual a edição do livro,
+ publisher: Editora responsável pela publicação
 }
 
 Exemplo de requisição:
