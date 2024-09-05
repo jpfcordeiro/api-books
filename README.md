@@ -2,24 +2,24 @@
 ![NPM](https://img.shields.io/npm/l/react)
 
 # API Books
-Esta API é utilizada para gerenciar um catálogo de jogos, permitindo operações de CRUD (criar, ler, atualizar e deletar) sobre jogos.
+Esta API é utilizada para gerenciar um catálogo de livros, permitindo operações de CRUD (criar, ler, atualizar e deletar) sobre livros presentes no banco de dados (MongoDB).
 
 ## Endpoints
 ### - GET /books
-Esse endpoint é responsável por retornar a listagem de todos os jogos cadastrados no banco de dados.
+Esse endpoint é responsável por retornar a listagem de todos os livros cadastrados no banco de dados.
 
 #### Parâmetros:
 Nenhum
 
 #### Respostas:
 ##### OK! 200
-Caso essa resposta aconteça, você vai receber a listagem de todos os jogos.
+Caso essa resposta aconteça, você vai receber a listagem de todos os livros cadastrados.
 
 Exemplo de resposta:
 
 ```
 {
-    "games": [
+    "books": [
         {
             "title": "Call of Duty MW",
             "year": 2019,
@@ -60,13 +60,16 @@ Exemplo de resposta:
 ```
 
 ### - POST /book
-Esse endpoint é responsável por cadastrar um novo jogo no banco de dados.
+Esse endpoint é responsável por cadastrar um novo livro no banco de dados.
 
 #### Parâmetros:
-title: Título do jogo.<br>
-year: Ano de lançamento do jogo.<br>
-price: Preço do jogo.<br>
-descriptions: Descrições adicionais sobre o jogo (opcional).
+title: Título do livro.<br>
+author: Autor do livro.<br>
+year: Ano de publicação do livro.<br>
+description: Descrições adicionais sobre o livro: {
+ genre: Gênero do livro,
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro)
+}.
 
 Exemplo de requisição:
 
@@ -87,7 +90,7 @@ Exemplo de requisição:
 
 #### Respostas:
 ##### Criado! 201
-Caso essa resposta aconteça, o novo jogo foi criado com sucesso.
+Caso essa resposta aconteça, o novo livro foi criado com sucesso.
 
 Exemplo de resposta: Nenhum conteúdo retornado.
 
@@ -104,14 +107,14 @@ Exemplo de resposta:
 
 
 ### - DELETE /book/
-Esse endpoint é responsável por deletar um jogo específico pelo seu ID.
+Esse endpoint é responsável por deletar um livro específico pelo seu ID.
 
 #### Parâmetros:
-id: ID do jogo a ser deletado.
+id: ID do livro a ser deletado.
 
 #### Respostas:
 ##### Sem Conteúdo! 204
-Caso essa resposta aconteça, o jogo foi deletado com sucesso e não há conteúdo para retornar ao cliente.
+Caso essa resposta aconteça, o livro foi deletado com sucesso e não há conteúdo para retornar ao cliente.
 
 Exemplo de resposta: Nenhum conteúdo retornado.
 
@@ -138,14 +141,17 @@ Exemplo de resposta:
 ```
 
 ### - PUT /book/
-Esse endpoint é responsável por atualizar as informações de um jogo específico pelo seu ID.
+Esse endpoint é responsável por atualizar as informações de um livro específico pelo seu ID.
 
 #### Parâmetros:
-id: ID do jogo a ser atualizado.<br>
-title: Título do jogo (opcional).<br>
-year: Ano de lançamento do jogo (opcional).<br>
-price: Preço do jogo (opcional).<br>
-descriptions: Descrições adicionais sobre o jogo (opcional).<br>
+id: ID do livro a ser atualizado.<br>
+title: Título do livro.<br>
+year: Ano de publicação do livro.<br>
+author: Autor do livro.<br>
+description: Descrições adicionais sobre o livro: {
+ genre: Gênero do livro,
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro)
+}
 
 Exemplo de requisição:
 
@@ -166,7 +172,7 @@ Exemplo de requisição:
 
 #### Respostas:
 ##### OK! 200
-Caso essa resposta aconteça, as informações do jogo foram atualizadas com sucesso.
+Caso essa resposta aconteça, as informações do livro foram atualizadas com sucesso.
 
 Exemplo de resposta:
 
@@ -210,14 +216,14 @@ Exemplo de resposta:
 ```
 
 ### - GET /book/
-Esse endpoint é responsável por retornar as informações de um jogo específico pelo seu ID.
+Esse endpoint é responsável por retornar as informações de um livro específico pelo seu ID.
 
 #### Parâmetros:
-id: ID do jogo a ser consultado.
+id: ID do livro a ser consultado.
 
 #### Respostas:
 ##### OK! 200
-Caso essa resposta aconteça, você vai receber as informações do jogo solicitado.
+Caso essa resposta aconteça, você vai receber as informações do livro solicitado.
 
 Exemplo de resposta:
 
@@ -239,13 +245,13 @@ Exemplo de resposta:
 ```
 
 ##### Não Encontrado! 404
-Caso essa resposta aconteça, significa que o jogo com o ID fornecido não foi encontrado.
+Caso essa resposta aconteça, significa que o livro com o ID fornecido não foi encontrado.
 
 Exemplo de resposta:
 
 ```
 {
-    "err": "Jogo não encontrado!"
+    "err": "Livro não encontrado!"
 }
 ```
 
