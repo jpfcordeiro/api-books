@@ -1,0 +1,27 @@
+{
+  "name": "api-books",
+  "version": "1.0.0",
+  "description": "API de livros para aula de desenvolvimento web 3",
+  "main": "indxex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpfcordeiro/api-books.git"
+  },
+  "author": "Cordeiro,João. Santana,Lucas. Shimabukuro,Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpfcordeiro/api-books/issues"
+  },
+  "homepage": "https://github.com/jpfcordeiro/api-books#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.6.1",
+    "nodemon": "^3.1.4"
+  },
+  "type":"module"
+}

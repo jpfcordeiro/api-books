@@ -2,18 +2,31 @@
 ![NPM](https://img.shields.io/npm/l/react)
 
 # API Books
-Esta API é utilizada para gerenciar um catálogo de livros, permitindo operações de CRUD (criar, ler, atualizar e deletar) sobre livros presentes no banco de dados (MongoDB).
+Esta API é utilizada para gerenciar um catálogo de livros, permitindo operações de CRUD.
+> Criar, Ler, Atualizar (Update) e Deletar
+
+Linguagens usasdas: <br>
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=mongodb,nodejs" />
+  </a>
+</p>
+Editor <br>
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=vscode" />
+  </a>
+</p>
 
 ## Endpoints
-### - GET /books
+### <font color="#FFFF00">GET</font> /books
 Esse endpoint é responsável por retornar a listagem de todos os livros cadastrados no banco de dados.
 
 #### Parâmetros:
-Nenhum
+*Nenhum*
 
 #### Respostas:
-##### OK! 200
-Caso essa resposta aconteça, você vai receber a listagem de todos os livros cadastrados.
+<font color="#00FF00">OK! 200</font>: Caso essa resposta aconteça, você vai receber a listagem de todos os livros cadastrados.
 
 Exemplo de resposta:
 
@@ -21,8 +34,8 @@ Exemplo de resposta:
 {
     "books": [
         {
-            "title": "Call of Duty MW",
-            "year": 2019,
+            "title": "Book Title",
+            "year": 2024,
             "price": 60,
             "descriptions": [
                 {
