@@ -64,7 +64,7 @@ const deleteBook = async (req, res) => {
             const existingBook = await bookService.getOne(id);
             if (!existingBook) { return res.status(404).json({ error: 'Livro não encontrado.' }); }
             bookService.delete(id);
-            res.status(200).json({ Success: `Livro '${existingBook.title}' deletado com sucesso.` }); //Cód. Status 200: OK
+            res.status(204).json({ Success: `Livro '${existingBook.title}' deletado com sucesso.` }); //Cód. Status 204: No content
         } else {res.sendStatus(400); } //Cód. Status 400: Bad Request
     } catch (error) {
         console.log(error);
