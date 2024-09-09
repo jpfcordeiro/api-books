@@ -5,7 +5,7 @@
 Esta API é utilizada para gerenciar um catálogo de livros, permitindo operações de CRUD.
 > Criar, Ler, Atualizar (Update) e Deletar
 
-Linguagens usasdas: <br>
+Tecnologias utilizadas: <br>
 <p>
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=mongodb,nodejs" />
@@ -79,12 +79,13 @@ Esse endpoint é responsável por cadastrar um novo livro no banco de dados.
 title: Título do livro.<br>
 author: Autor do livro.<br>
 year: Ano de publicação do livro.<br>
-description: Descrições adicionais sobre o livro: {
- genre: Gênero do livro,
- isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),
- edition: Qual a edição do livro,
- publisher: Editora responsável pela publicação
-}.
+description: Descrições adicionais sobre o livro: {<br>
+ edition: Qual a edição do livro,<br>
+ publisher: Editora responsável pela publicação,<br>
+ genre: Gênero do livro,<br>
+ type: Tipo do livro (Ebook ou Físico),<br>
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),<br>
+}
 
 Exemplo de requisição:
 
@@ -161,13 +162,14 @@ Esse endpoint é responsável por atualizar as informações de um livro especí
 #### Parâmetros:
 id: ID do livro a ser atualizado.<br>
 title: Título do livro.<br>
-year: Ano de publicação do livro.<br>
 author: Autor do livro.<br>
-description: Descrições adicionais sobre o livro: {
- genre: Gênero do livro,
- isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),
- edition: Qual a edição do livro,
- publisher: Editora responsável pela publicação
+year: Ano de publicação do livro.<br>
+description: Descrições adicionais sobre o livro: {<br>
+ edition: Qual a edição do livro,<br>
+ publisher: Editora responsável pela publicação,<br>
+ genre: Gênero do livro,<br>
+ type: Tipo do livro (Ebook ou Físico),<br>
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),<br>
 }
 
 Exemplo de requisição:
