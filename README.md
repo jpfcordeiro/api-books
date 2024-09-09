@@ -32,32 +32,58 @@ Exemplo de resposta:
 
 ```
 {
-    "books": [
-        {
-            "title": "Book Title",
-            "year": 2024,
-            "price": 60,
-            "descriptions": [
-                {
-                    "genre": "Action",
-                    "platform": "PC",
-                    "rating": "M"
-                }
-            ]
-        },
-        {
-            "title": "Sea of Thieves",
-            "year": 2018,
-            "price": 40,
-            "descriptions": [
-                {
-                    "genre": "Adventure",
-                    "platform": "Xbox",
-                    "rating": "T"
-                }
-            ]
-        }
-    ]
+	"books": [
+		{
+			"_id": "66db3dc075aa1ff24922a0d7",
+			"title": "Fahrenheit 451",
+			"author": [
+				"Bradbury, Ray"
+			],
+			"yearPublication": 2012,
+			"description": [
+				{
+					"edition": "1º Edição",
+					"publisher": "Biblioteca Azul",
+					"genre": [
+						"Romance",
+						"Ficção científica",
+						"Ficção distópica",
+						"Ficção Política"
+					],
+					"type": "Físico",
+					"language": "Portugês",
+					"isbn": "9788525052247",
+					"_id": "66db4b662a3b04e7bfbfb9b2"
+				}
+			],
+			"__v": 0
+		},
+		{
+			"_id": "66db4ac92a3b04e7bfbfb9a8",
+			"title": "Fahrenheit 451",
+			"author": [
+				"Bradbury, Ray"
+			],
+			"yearPublication": 2013,
+			"description": [
+				{
+					"edition": "0",
+					"publisher": "HarperVoyager",
+					"genre": [
+						"Romance",
+						"Ficção científica",
+						"Ficção distópica",
+						"Ficção Política"
+					],
+					"type": "ebook",
+					"language": "Inglês",
+					"isbn": "B00BAJ6GL2",
+					"_id": "66db4ac92a3b04e7bfbfb9a9"
+				}
+			],
+			"__v": 0
+		}
+	]
 }
 ```
 
@@ -79,7 +105,7 @@ Esse endpoint é responsável por cadastrar um novo livro no banco de dados.
 title: Título do livro.<br>
 author: Autor do livro.<br>
 year: Ano de publicação do livro.<br>
-description: Descrições adicionais sobre o livro: {<br>
+description: Descrições adicionais sobre o livro: <br>{<br>
  edition: Qual a edição do livro,<br>
  publisher: Editora responsável pela publicação,<br>
  genre: Gênero do livro,<br>
@@ -91,16 +117,19 @@ Exemplo de requisição:
 
 ```
 {
-    "title": "Minecraft",
-    "year": 2012,
-    "price": 20,
-    "descriptions": [
-        {
-            "genre": "Sandbox",
-            "platform": "PC",
-            "rating": "E"
-        }
-    ]
+	"title":"A Divina Comédia",
+	"author":["Alighieri, Dante"],
+	"yearPublication":2017,
+	"description":[
+		{
+			"edition":"4º Edição",
+			"publisher":"Editora 34",
+			"genre":["Poesia"],
+			"type":"Físico",
+			"language":"Português",
+			"isbn":"978-8573261202"
+		}
+	]
 }
 ```
 
@@ -164,7 +193,7 @@ id: ID do livro a ser atualizado.<br>
 title: Título do livro.<br>
 author: Autor do livro.<br>
 year: Ano de publicação do livro.<br>
-description: Descrições adicionais sobre o livro: {<br>
+description: Descrições adicionais sobre o livro: <br>{<br>
  edition: Qual a edição do livro,<br>
  publisher: Editora responsável pela publicação,<br>
  genre: Gênero do livro,<br>
