@@ -6,6 +6,7 @@ class bookService {
         try {
             const newBook = new Book({ title, author, yearPublication, description });
             await newBook.save();
+            return newBook;
         } catch (error) { console.log(error); }
     }
 
