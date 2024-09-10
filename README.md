@@ -205,16 +205,27 @@ Exemplo de requisição:
 
 ```
 {
-    "title": "Minecraft Updated",
-    "year": 2013,
-    "price": 25,
-    "descriptions": [
-        {
-            "genre": "Sandbox",
-            "platform": "PC",
-            "rating": "E"
-        }
-    ]
+	"title": "Laranja Mecânica",
+		"author": [
+			"Burgess, Anthony"
+		],
+		"yearPublication": 2019,
+		"description": [
+			{
+				"edition": "3º Edição",
+				"publisher": "Editora Aleph",
+				"genre": [
+					"Romance",
+					"Ficção científica",
+					"Drama",
+					"Novela",
+					"Sátira", "Humor ácido"
+				],
+				"type": "Físico",
+				"language": "Português",
+				"isbn": "9788576574460"
+		}
+	]
 }
 ```
 
@@ -226,18 +237,7 @@ Exemplo de resposta:
 
 ```
 {
-    "game": {
-        "title": "Minecraft Updated",
-        "year": 2013,
-        "price": 25,
-        "descriptions": [
-            {
-                "genre": "Sandbox",
-                "platform": "PC",
-                "rating": "E"
-            }
-        ]
-    }
+	"Success": "Livro 'Laranja Mecânica' atualizado com sucesso."
 }
 ```
 
@@ -277,18 +277,36 @@ Exemplo de resposta:
 
 ```
 {
-    "game": {
-        "title": "Minecraft",
-        "year": 2012,
-        "price": 20,
-        "descriptions": [
-            {
-                "genre": "Sandbox",
-                "platform": "PC",
-                "rating": "E"
-            }
-        ]
-    }
+	"book": {
+		"_id": "66df1d127ad358ccc02c7642",
+		"title": "Laranja Mecânica",
+		"author": [
+			"Burgess, Anthony"
+		],
+		"yearPublication": 2019,
+		"description": [
+			{
+				"edition": "3º Edição",
+				"publisher": "Editora Aleph",
+				"genre": [
+					"Romance",
+					"Ficção científica",
+					"Drama",
+					"Novela",
+					"Sátira",
+					"Humor ácido",
+					"Ficção distópica",
+					"Ação"
+				],
+				"type": "Físico",
+				"language": "Português",
+				"isbn": "9788576574460",
+				"_id": "66df1d137ad358ccc02c7643"
+			}
+		],
+		"__v": 0
+	}
+}
 }
 ```
 
