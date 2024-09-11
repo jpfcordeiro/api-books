@@ -234,17 +234,123 @@ Esse endpoint é responsável por retornar as informações de um livro específ
 
 ##### Exemplo de requisição:
 ```
+<<<<<<< HEAD
 /book/66df3bb7c5e3fe845488ea99
 ```
 
 #### Respostas:
 <span style = "color:#00FF00; font-weight: bold">OK! 200</span><br>
+=======
+{
+    "err": "ID inválido!"
+}
+```
+
+##### Erro Interno do Servidor! 500
+Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
+
+Exemplo de resposta:
+
+```
+{
+    "err": "Erro interno do servidor!"
+}
+```
+
+### - PUT /book/
+Esse endpoint é responsável por atualizar as informações de um livro específico pelo seu ID.
+
+#### Parâmetros:
+id: ID do livro a ser atualizado.<br>
+title: Título do livro.<br>
+author: Autor do livro.<br>
+year: Ano de publicação do livro.<br>
+description: Descrições adicionais sobre o livro: <br>{<br>
+ edition: Qual a edição do livro,<br>
+ publisher: Editora responsável pela publicação,<br>
+ genre: Gênero do livro,<br>
+ type: Tipo do livro (Ebook ou Físico),<br>
+ isbn: International Standard Book Number - ISBN 13 (Número Internacional Padrão de Livro),<br>
+}
+
+Exemplo de requisição:
+
+```
+{
+	"title": "Laranja Mecânica",
+		"author": [
+			"Burgess, Anthony"
+		],
+		"yearPublication": 2019,
+		"description": [
+			{
+				"edition": "3º Edição",
+				"publisher": "Editora Aleph",
+				"genre": [
+					"Romance",
+					"Ficção científica",
+					"Drama",
+					"Novela",
+					"Sátira", "Humor ácido"
+				],
+				"type": "Físico",
+				"language": "Português",
+				"isbn": "9788576574460"
+		}
+	]
+}
+```
+
+#### Respostas:
+##### OK! 200
+Caso essa resposta aconteça, as informações do livro foram atualizadas com sucesso.
+
+Exemplo de resposta:
+
+```
+{
+	"Success": "Livro 'Laranja Mecânica' atualizado com sucesso."
+}
+```
+
+##### Requisição Inválida! 400
+Caso essa resposta aconteça, significa que o ID fornecido é inválido ou a requisição contém dados malformados.
+
+Exemplo de resposta:
+
+```
+{
+    "err": "ID inválido ou dados malformados!"
+}
+```
+
+##### Erro Interno do Servidor! 500
+Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
+
+Exemplo de resposta:
+
+```
+{
+    "err": "Erro interno do servidor!"
+}
+```
+
+### - GET /book/
+Esse endpoint é responsável por retornar as informações de um livro específico pelo seu ID.
+
+#### Parâmetros:
+id: ID do livro a ser consultado.
+
+#### Respostas:
+##### OK! 200
+>>>>>>> 1b67feda723410518d50abf43b19af07d7db466d
 Caso essa resposta aconteça, você vai receber as informações do livro solicitado.
 
 ##### Exemplo de resposta:
 ```
 {
 	"book": {
+<<<<<<< HEAD
 		"_id": "66df3bb7c5e3fe845488ea99",
 		"title": "Manifesto do partido comunista",
 		"author": [
@@ -265,10 +371,40 @@ Caso essa resposta aconteça, você vai receber as informações do livro solici
 				"language": "Português",
 				"isbn": "857-2324186",
 				"_id": "66df3bb7c5e3fe845488ea9a"
+=======
+		"_id": "66df1d127ad358ccc02c7642",
+		"title": "Laranja Mecânica",
+		"author": [
+			"Burgess, Anthony"
+		],
+		"yearPublication": 2019,
+		"description": [
+			{
+				"edition": "3º Edição",
+				"publisher": "Editora Aleph",
+				"genre": [
+					"Romance",
+					"Ficção científica",
+					"Drama",
+					"Novela",
+					"Sátira",
+					"Humor ácido",
+					"Ficção distópica",
+					"Ação"
+				],
+				"type": "Físico",
+				"language": "Português",
+				"isbn": "9788576574460",
+				"_id": "66df1d137ad358ccc02c7643"
+>>>>>>> 1b67feda723410518d50abf43b19af07d7db466d
 			}
 		],
 		"__v": 0
 	}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 1b67feda723410518d50abf43b19af07d7db466d
 }
 ```
 
